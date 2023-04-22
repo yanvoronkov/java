@@ -1,3 +1,5 @@
+//Вывести все простые числа от 1 до 1000
+
 package Seminars;
 
 import java.util.Scanner;
