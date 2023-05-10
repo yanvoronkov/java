@@ -2,30 +2,17 @@ package Stepic;
 
 import java.util.Scanner;
 
-public class Task1129 {
+public class Task1131 {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int k = scanner.nextInt();
-
-        boolean[] knockedDown = new boolean[n];
-
-        for (int i = 0; i < k; i++) {
-            int a = scanner.nextInt() - 1;
-            int b = scanner.nextInt() - 1;
-
-            for (int j = a; j <= b; j++) {
-                knockedDown[j] = true;
-            }
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int array[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = i;
         }
-
-//        for (boolean isKnockedDown : knockedDown) {
-//            System.out.print(isKnockedDown ? "." : "I");
-//        }
-        for (int i = 0; i < knockedDown.length; i++) {
-            System.out.print(knockedDown[i] == true ? "." : "I");
-        }
+        for (int i = 0; i < array.length; i++)
+            System.out.print(array[i] + " ");
 
     }
 }
