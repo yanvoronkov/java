@@ -7,26 +7,26 @@ public class Task1146 {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-
-        int[][] matrix = new int[n][n];
-
+        int m = sc.nextInt();
+        int[][] matrix = new int[n][m];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == j) {
-                    matrix[i][j] = 1;
-                }
-                if (i > j) {
-                    matrix[i][j] = 2;
+            for (int j = 0; j < m; j++) {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+        int min = matrix[0][0];
+        int minI = 0;
+        int minJ = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (matrix[i][j] < min) {
+                    min = matrix[i][j];
+                    minI = i;
+                    minJ = j;
                 }
             }
         }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(minI + " " + minJ);
 
     }
 }
