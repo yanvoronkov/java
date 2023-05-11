@@ -2,22 +2,27 @@ package Stepic;
 
 import java.util.Scanner;
 
-public class Task1143 {
+public class Task1144 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int m = sc.nextInt();
-        int[][] matrix = new int[n][m];
+
+        int[][] matrix = new int[n][n];
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                matrix[i][j] = sc.nextInt();
+            for (int j = 0; j < n; j++) {
+                if (i == j) {
+                    matrix[i][j] = 1;
+                }
+                if (i > j) {
+                    matrix[i][j] = 2;
+                }
             }
         }
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
+            for (int j = 0; j < n; j++) {
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
