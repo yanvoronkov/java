@@ -52,7 +52,6 @@ public class Triplets_recipe {
         System.out.println("- гвоздики: " + carnation + " г");
         System.out.println("- пижмы: " + tansy + " г");
 
-
     }
 }
 

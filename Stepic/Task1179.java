@@ -1,20 +1,38 @@
 package Stepic;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 
-public class Task1178 {
+public class Task1179 {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        char[] a = sc.nextLine().toCharArray();
-        int count=0;
-        for (int i=0;i<a.length;i++){
-            if (a[i] == '0' || a[i] == '6' || a[i] == '9') count++;
-            if (a[i] == '8') count=count+2;
+    } {
+
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        String result = "";
+        String number = "";
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if (Character.isDigit(c)) {
+                number += c;
+            } else {
+                if (!number.isEmpty()) {
+                    int n = Integer.parseInt(number);
+                    String binary = Integer.toBinaryString(n);
+                    result += binary;
+                    number = "";
+                }
+                result += c;
+            }
         }
-        System.out.println(count);
+        if (!number.isEmpty()) {
+            int n = Integer.parseInt(number);
+            String binary = Integer.toBinaryString(n);
+            result += binary;
+        }
+        System.out.println(result);
+
         
 
     }
