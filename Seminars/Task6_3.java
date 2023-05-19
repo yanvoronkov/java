@@ -2,7 +2,7 @@ package Seminars;
 
 import java.util.*;
 
-public class Main {
+public class Task6_3 {
     public static void main(String[] args) {
         Cat cat1 = new Cat("Васька", 10, "Василий Петрович", "Корнишрекс");
         Cat cat2 = new Cat("Мурзик", 8, "Иван", "Мейнкун");
