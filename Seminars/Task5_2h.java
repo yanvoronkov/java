@@ -27,7 +27,7 @@ public class Task5_2h {
         }
 
         nameCounts.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue())
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
                 .forEach(entry -> System.out.println(entry.getKey() + ": " + entry.getValue()));
     }
 }
