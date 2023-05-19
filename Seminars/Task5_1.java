@@ -25,6 +25,8 @@ public class Task5_1<T> {
 
 		System.out.println(passports.get("234561"));
 		System.out.println();
+		System.out.println(passports.getByLastName("Иванов"));
+		System.out.println();
 		System.out.println(passports.getAll());
 
 	}
